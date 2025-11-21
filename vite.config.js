@@ -2,19 +2,18 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-
 export default defineConfig({
   plugins: [react()],
 
-  
-  base: "/zaid-portfolio/",   
+  // ⭐ Needed for GitHub Pages
+  base: "/zaid-portfolio/",
 
   server: {
     port: 3000,
     open: true
-  }
-})
+  },
 
+  // ⭐ Your custom build options (now properly inside)
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
